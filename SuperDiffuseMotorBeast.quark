@@ -1,0 +1,9 @@
+(
+    \name: "SuperDiffuseMotorBeast",
+    \summary: "An adaptor to use the motorBEAST OSC controller with SuperDiffuse",
+    \author: "James Surgenor",
+    \version: "0.1.0",
+    \organization: "University of Sheffield Sound Studios",
+    \since: "2019",
+    \url: "https://github.com/jrsurge/SuperDiffuseMotorBeast"
+)

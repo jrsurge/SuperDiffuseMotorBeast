@@ -1,0 +1,48 @@
+TITLE:: SuperDiffuse_MotorBeast
+summary:: motorBEAST controller to SuperDiffuse
+categories:: Quarks>SuperDiffuse
+related:: Classes/SuperDiffuse_Concert
+
+DESCRIPTION::
+The motorBEAST controller, and clones, are based on the glui controller.
+As a result, it needs a mediator to control things as expected.
+This class acts as an adaptor to convert the OSC from the motorBEAST into
+the SuperDiffuse control scheme.
+
+
+CLASSMETHODS::
+
+METHOD:: new
+Creates a new adaptor for a new controller
+
+ARGUMENT:: ip
+The IP address (as a string) of the controller.
+warning::Anything from another IP address will be rejected::
+
+ARGUMENT:: port
+The port the controller is sending over.
+warning::Anything from another port will be rejected::
+
+ARGUMENT:: channelOffset
+If there are multiple controllers, the channel offset can be
+used to offset the control in SuperDiffuse. For example,
+if adding a second controller, an offset of 32 would be required
+to use this controller to control 32-64
+
+returns:: a new instance of the adaptor
+
+
+INSTANCEMETHODS::
+
+METHOD:: free
+this releases the OSC responder, essentially stopping the adaptor.
+
+PRIVATE:: init
+
+
+EXAMPLES::
+
+code::
+// Adding something like this to your startup file should be all that's required
+SuperDiffuse_MotorBeast("192.168.1.123", 57120);
+::
